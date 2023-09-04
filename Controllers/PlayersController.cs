@@ -22,7 +22,7 @@ namespace ad_ona_placencia_prueba_2.Controllers
             client.BaseAddress = new Uri(baseURL);
             client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("x-apisports-key", "e496ed707a576e3d32d2a0397916954d");
+            client.DefaultRequestHeaders.Add("x-apisports-key", "a12be76f60ac7a3fa516ec7efb4dc228");
             client.DefaultRequestHeaders.Add("x-rapidapi-host", "v3.football.api-sports.io");
             return client;
         }
