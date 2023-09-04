@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ad_ona_placencia_prueba_2.Models.Player>
+
+@{
+    ViewBag.Title = "Jugadores";
+}
+
+<h2>Jugadores</h2>
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Nacionalidad
+        </th>
+        <th>
+            Edad
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.Raw(item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nationality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.age) años
+        </td>
+        <td>
+            @Html.ActionLink("Detalles >", "Detalles", new { id=item.id }, new { @class = "btn btn-outline-secondary" })
+        </td>
+    </tr>
+}
+
+</table>

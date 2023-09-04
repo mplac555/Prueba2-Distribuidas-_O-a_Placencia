@@ -1,0 +1,51 @@
+﻿@model ad_ona_placencia_prueba_2.Models.Team
+
+@{
+    ViewBag.Title = "Detalles";
+}
+<p>
+    @Html.ActionLink("< Regresar", "Index", "", new { @class = "btn btn-outline-secondary" })
+</p>
+<hr />
+
+<div class="equipo">
+    <img src="@Model.logo" />
+    <h2>@Html.DisplayFor(model => model.name)</h2>
+</div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Código
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.code)
+        </dd>
+
+        <dt>
+            País
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.country)
+        </dd>
+
+        <dt>
+            Fundación
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.founded)
+        </dd>
+
+        <dt>
+            Nacional
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.national)
+        </dd>
+    </dl>
+</div>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ad_ona_placencia_prueba_2.Models.Team>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Equipos</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Código
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            País
+        </th>
+        <th>
+            Fundación
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.founded)
+        </td>
+        <td>
+            @Html.ActionLink("Detalles >", "Detalles", new { id=item.id }, new {@class = "btn btn-outline-secondary"})
+        </td>
+    </tr>
+}
+
+</table>

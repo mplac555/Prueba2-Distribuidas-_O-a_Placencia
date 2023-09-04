@@ -1,0 +1,65 @@
+﻿@model ad_ona_placencia_prueba_2.Models.Player
+
+@{
+    ViewBag.Title = "Detalles";
+}
+<p>
+    @Html.ActionLink("< Regresar", "Index", "", new { @class = "btn btn-outline-secondary" })
+</p>
+
+<hr />
+
+<div class="jugador">
+    <img src="@Html.DisplayFor(model => model.photo)" />
+    <div>
+        <h2>@Html.Raw(Model.name)</h2>
+        <h5>@Html.DisplayFor(model => model.age) años</h5>
+    </div>
+</div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Nombre Completo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstName) @Html.DisplayFor(model => model.lastName)
+        </dd>
+
+        <dt>
+            Nacionalidad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nationality)
+        </dd>
+
+        <dt>
+            Estatura
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.height)
+        </dd>
+
+        <dt>
+            Peso
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weight)
+        </dd>
+
+        <dt>
+            Lesionado
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.injured)
+        </dd>
+
+    </dl>
+</div>
